@@ -1,0 +1,10 @@
+$(function(){
+    //imports
+    $('#header').load('../fragments/header.html');
+    $("#categories").load('../fragments/mainPage/categories.html');
+    $('#slider').load('../fragments/mainPage/slider.html');
+    $(".top-offer-product").load('../fragments/mainPage/product.html');
+    $("#social-programs-content").load('../fragments/mainPage/socialPrograms.html');
+    $('#mobile-slider').load('../fragments/mainPage/slider.html');
+    $(".sales-item-content").load('../fragments/mainPage/product.html');
+})
