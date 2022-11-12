@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/categories.css">
     <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/mobileBottomBar.css">
     <link rel="stylesheet" href="./styles/socialPrograms.css">
+    <link rel="stylesheet" href="./styles/news.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/home.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -21,7 +24,8 @@
     <title>Document</title>
   </head>
   <body>
-    <header id="header"></header>
+    <div id="mobile-bottom-bar"></div>
+    <header id="header" class="main-page-header"></header>
     <div id="mobile-slider"></div>
     <div class="container">
       <div class="row">
@@ -117,6 +121,14 @@
         <div class="sales-item-content"></div>
         <div class="sales-item-content disscounted-product new-product"></div>
       </section>
+      <section id="organizations-content"></section>
+      <section id="news-and-shops" class="news-and-shops-content">
+        <div id="news-container"></div>
+        <div id="shops-continer" style="width: calc(100% - 690px);"></div>
+      </section>
     </div>
+    <footer id="footer">
+
+    </footer>
   </body>
 </html>

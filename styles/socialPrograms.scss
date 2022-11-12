@@ -1,6 +1,83 @@
 .social-programs-container {
   height: 615px;
   width: 100%;
+  padding-right: 17px;
+}
+#organizations-content {
+  .social-programs-background {
+    background-color: #f3f3f3;
+    transform: rotate(-4deg);
+  }
+  .social-programs-content {
+    transform: rotate(4deg) !important;
+  }
+  .social-program-items-list {
+    transform: rotate(4deg) !important;
+  }
+  .social-program-items-list {
+    margin-left: 0px !important;
+  }
+  .social-program-title {
+    color: black;
+  }
+  .social-program-level-two-title {
+    color: #41c227;
+  }
+  .social-program-description-text {
+    color: black;
+  }
+  .view-all-social-program {
+    color: #41c227;
+    border-color: #41c227;
+  }
+  .social-programs-content {
+    padding-left: 80px;
+  }
+  .social-program-description-text {
+    padding-right: 30px !important;
+  }
+  .social-programs-background {
+    padding-right: 52px;
+  }
+  .social-programs-wrapper{
+    display: none;
+  }
+  .social-program-prices{
+    display: none;
+  }
+  .social-program-progress{
+    display: none;
+  }
+  .social-programs-actions{
+    margin-top: 17px;
+  }
+}
+#shop-items{
+  .social-programs-wrapper{
+    display: none;
+  }
+  .social-program-prices{
+    display: none;
+  }
+  .social-program-progress{
+    display: none;
+  }
+  .social-programs-actions{
+    margin-top: 17px;
+  }
+}
+@media (max-width: 1024px) {
+  #organizations-content {
+    .social-programs-background {
+      flex-direction: column-reverse !important;
+    }
+    .social-program-description-text {
+      padding-right: 50px !important;
+    }
+    .social-programs-content{
+      padding-left: 45px;
+    }
+  }
 }
 .social-programs-background {
   background-color: #41c227;
@@ -116,6 +193,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 12px;
 }
 .social-programs-actions-btns {
   display: flex;
@@ -140,6 +218,20 @@
   width: 0px;
   overflow: hidden;
   color: #4a4a4a;
+}
+.social-program-progress-on-social-programs-page{
+  display: none;
+}
+.social-programs-items{
+  .social-program-prices{
+    display: none;
+  }
+  .social-program-progress{
+    display: none;
+  }
+  .social-program-progress-on-social-programs-page{
+    display: flex !important;
+  }
 }
 .social-programs-add-to-favorite:hover {
   .social-programs-add-to-favorite-btn {
@@ -181,10 +273,13 @@
   max-width: 100%;
   height: 40px;
 }
-@media(min-width: 1024px){
-    .social-program-items-list{
-        margin-top: -120px;
-    }
+@media (min-width: 1024px) {
+  .social-program-items-list {
+    margin-top: -120px;
+  }
+  #organizations-content .social-programs-background{
+    padding-left: 0px;
+  }
 }
 @media (max-width: 1399px) {
   .social-program-item {
@@ -197,20 +292,20 @@
   }
 }
 @media (max-width: 1024px) {
-    .social-program-items-list{
-        margin-top: 0px !important;
-    }
+  .social-program-items-list {
+    margin-top: 0px !important;
+  }
   .social-program-item {
     width: 50%;
   }
-  .programs-actions-btns{
+  .programs-actions-btns {
     width: 24px;
     height: 24px;
   }
-  .social-program-quantities{
+  .social-program-quantities {
     font-size: 11px;
   }
-  .social-programs-add-fav-actions-hover{
+  .social-programs-add-fav-actions-hover {
     font-size: 11px;
     margin-left: 30px;
   }
@@ -233,7 +328,7 @@
     font-size: 15px;
     padding: 12px 0px 15px 0px;
   }
-  .social-program-text-section{
+  .social-program-text-section {
     width: 100%;
   }
   .view-all-social-program {
@@ -261,18 +356,18 @@
     margin-left: -51px;
     padding: 0px 26px 0px 44px;
   }
-  .social-program-item{
+  .social-program-item {
     padding: 0px 5px;
     margin-top: 36px;
   }
-  .social-programs-content{
+  .social-programs-content {
     width: 100%;
     margin-top: 30px;
   }
 }
-@media(max-width: 520px){
-    .social-programs-background{
-        height: 650px;
-        margin-top: 24px !important;
-    }
+@media (max-width: 520px) {
+  .social-programs-background {
+    height: 650px;
+    margin-top: 24px !important;
+  }
 }

@@ -130,7 +130,7 @@
 .header-mobile {
   height: 73px;
   width: 100%;
-  background: #E5F4E2;
+  background: #e5f4e2;
 }
 
 .header-mobile-item-title {
@@ -150,6 +150,7 @@
   align-items: center;
 }
 .header-mobile .header-mobile-items-block {
+  cursor: pointer;
   height: 38px;
   width: 38px;
   display: flex;
@@ -159,7 +160,7 @@
   margin-bottom: 4px;
 }
 .header-mobile .active-mobile-header-items {
-  background: #4CC334;
+  background: #4cc334;
 }
 .header-mobile .active-mobile-header-items svg path {
   fill: white !important;
@@ -186,9 +187,9 @@
 .show-categories-mobile-view {
   width: 165px;
   height: 35px;
-  background: #E5F4E2;
-  color: #2BA513;
-  border: 1px solid #E5F4E2;
+  background: #e5f4e2;
+  color: #2ba513;
+  border: 1px solid #e5f4e2;
   border-radius: 18px;
 }
 
@@ -209,7 +210,7 @@
   height: 40px;
   background: white;
   border-radius: 20px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   padding-left: 22px;
 }
 
@@ -224,7 +225,7 @@
   height: 40px;
   width: 100%;
   margin-bottom: 24px;
-  background: #F3F3F3;
+  background: #f3f3f3;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -234,7 +235,7 @@
 .navbar-redirect-links a {
   margin-right: 23px;
   text-decoration: none;
-  color: #2B2B2B;
+  color: #2b2b2b;
 }
 
 .nav-bar-list {
@@ -250,14 +251,14 @@
 .nav-bar-list li p {
   margin-left: 7px;
   font-size: 15px;
-  color: #2B2B2B;
+  color: #2b2b2b;
 }
 
 .active-nav svg path {
-  fill: #206DFC;
+  fill: #206dfc;
 }
 .active-nav p {
-  color: #206DFC !important;
+  color: #206dfc !important;
 }
 
 .mobile-view {
@@ -310,15 +311,15 @@
   height: 48px;
   font-size: 15px;
   border-radius: 24px;
-  border: 2px solid #42D921;
+  border: 2px solid #42d921;
 }
 .account-controller-dropdown-btns .sign-in {
-  background: #42D921;
+  background: #42d921;
   color: white;
 }
 .account-controller-dropdown-btns .register {
   background: white;
-  color: #42D921;
+  color: #42d921;
 }
 
 .language-switcher {
@@ -342,7 +343,7 @@
 }
 
 .account-controller-dropdown-hr {
-  color: #E6E6E6;
+  color: #e6e6e6;
 }
 
 .account-controller-password-change {
@@ -359,7 +360,7 @@
   padding: 10px 0px;
 }
 .account-controller-dropdown-menu-items li:hover {
-  background: #F3F3F3;
+  background: #f3f3f3;
   cursor: pointer;
 }
 .account-controller-dropdown-menu-items li a {
@@ -390,4 +391,44 @@
   .mobile-view {
     display: flex !important;
   }
+  .active-mobile-header-title {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+.with-filter .logo-on-mobile {
+  display: none;
+}
+.with-filter .show-filter-mobile-view-btn {
+  display: block !important;
+  width: 166px;
+  height: 35px;
+  background: #e8eeff;
+  border: 1px solid #e8eeff;
+  border-radius: 22px;
+  color: #206dfc;
+}
+.with-filter .header-search-block-mobile {
+  display: none !important;
+}
+
+.show-filter-mobile-view-btn {
+  display: none;
+}
+
+.no-left-item .logo-on-mobile,
+.no-left-item .show-filter-mobile-view-btn {
+  display: none !important;
+}
+.no-left-item .header-bottom-section-mobile.mobile-view {
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.without-search .header-search-block-mobile.mobile-view {
+  display: none !important;
+}
+
+.no-category .show-categories-mobile-view {
+  display: none !important;
 }/*# sourceMappingURL=header.css.map */

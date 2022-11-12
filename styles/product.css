@@ -9,7 +9,26 @@
   border: 1px solid #41C227;
 }
 .product-container:hover .hearts-on-hover {
-  display: block !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.free-item {
+  display: none;
+  font-size: 20px;
+  color: #41C227;
+  text-transform: uppercase;
+}
+
+.free-product .product-price-disscounted {
+  display: none;
+}
+.free-product .product-price-old-price {
+  display: none;
+}
+.free-product .free-item {
+  display: block;
 }
 
 .top-offers-container {
@@ -177,6 +196,10 @@
   }
 }
 @media (max-width: 1024px) {
+  .hearts-on-hover {
+    margin-top: -13px;
+    margin-left: -23px;
+  }
   .top-offer-product {
     width: 33.3333333333%;
   }

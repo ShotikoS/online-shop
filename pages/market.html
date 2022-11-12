@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/categories.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
+    <link rel="stylesheet" href="../styles/mobileBottomBar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/market.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/market.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mobile-bottom-bar"></div>
+    <div class="market-filter-on-mobile">
+      <div class="market-filter">
+        <div class="filter-head-line"></div>
+        <div class="filter-header filter-start">
+          <p>Filter</p>
+          <button class="close-filter">
+            <img src="../image/svg/clear-bold.svg" alt="clear filter" />
+          </button>
+        </div>
+        <div class="prodact-sortable-item">
+          <p>Sort by product type:</p>
+          <ul class="sort-by">
+            <li class="active-sorted">All</li>
+            <li>New</li>
+            <li>Used</li>
+          </ul>
+        </div>
+        <div class="prodact-sortable-item">
+          <p>Sort by Seller:</p>
+          <ul class="sort-by">
+            <li class="active-sorted">All</li>
+            <li>Only shops</li>
+            <li>Only Individuals</li>
+          </ul>
+        </div>
+        <div class="prodact-sortable-item">
+          <p>Sort by cause:</p>
+          <ul class="sort-by">
+            <li class="active-sorted">All</li>
+            <li style="color: #41c227">FREE</li>
+            <li>Donate</li>
+          </ul>
+        </div>
+        <hr class="market-filter-hr" />
+        <div class="filter-review">
+          <div class="filter-category-head">
+            <p>Reviews:</p>
+            <button style="color: #b6b6b6">
+              clear
+              <img
+                src="../image/svg/filter-clear-gray.svg"
+                alt="clear filter"
+              />
+            </button>
+          </div>
+          <div class="market-product-review">
+            <div class="selected-review"></div>
+            <div class="selected-review"></div>
+            <div class="selected-review"></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <hr class="market-filter-hr" />
+        <div class="filter-review">
+          <div class="filter-category-head">
+            <p>Price range:</p>
+            <button style="color: #b6b6b6">
+              clear
+              <img
+                src="../image/svg/filter-clear-gray.svg"
+                alt="clear filter"
+              />
+            </button>
+          </div>
+          <div class="market-product-price-range">
+            <div class="price-range">
+              <input
+                type="text"
+                class="min-price-filter"
+                placeholder="Min..."
+              />
+              <input
+                type="text"
+                class="max-price-filter"
+                placeholder="Max..."
+              />
+              <button class="set-rice-filter">Ok</button>
+            </div>
+          </div>
+        </div>
+        <hr class="market-filter-hr" />
+        <div class="filter-review">
+          <div class="filter-category-head">
+            <p>Price off:</p>
+            <button>
+              clear
+              <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+            </button>
+          </div>
+          <ul class="market-product-price-off">
+            <li>5%</li>
+            <li>15%</li>
+            <li class="selected-price-off">25%</li>
+            <li class="selected-price-off">50%</li>
+          </ul>
+        </div>
+        <hr class="market-filter-hr" />
+        <div class="filter-review">
+          <div class="filter-category-head" style="margin-bottom: 10px">
+            <p>Choose shipping type:</p>
+            <button>
+              clear
+              <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+            </button>
+          </div>
+          <div class="filter-checkboxes checkboxes-on-mobile">
+            <div class="checkbox-block">
+              <input type="checkbox" id="geo-post" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="owners-delivery" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="pick-up" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+          </div>
+        </div>
+        <hr class="market-filter-hr" />
+        <div class="filter-review">
+          <div class="filter-category-head" style="margin-bottom: 10px">
+            <p>Location:</p>
+            <button>
+              clear
+              <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+            </button>
+          </div>
+          <div class="filter-checkboxes-location checkboxes-on-mobile">
+            <div class="checkbox-block">
+              <input type="checkbox" id="Tbilisi" />
+              <label for="Tbilisi">Tbilisi</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Batumi" />
+              <label for="Batumi">Batumi</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Borjomi" />
+              <label for="Borjomi">Borjomi</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Bakuriani" />
+              <label for="Bakuriani">Bakuriani</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" class="owners-delivery" />
+              <label for="owners-delivery">city1</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+          </div>
+          <div class="view-all-location">
+            <button class="view-all-btn">View more</button>
+          </div>
+        </div>
+        <hr class="market-filter-hr" />
+        <div class="filter-review">
+          <div class="filter-category-head" style="margin-bottom: 10px">
+            <p>Brands:</p>
+            <button>
+              clear
+              <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+            </button>
+          </div>
+          <div class="search-in-market-filter">
+            <input
+              type="text"
+              class="form-control-filter"
+              placeholder="Search"
+            />
+            <button class="market-filter-search-btn">
+              <img src="../image/svg/filter-loog.svg" alt="search" />
+            </button>
+          </div>
+          <div class="filter-checkboxes-brands checkboxes-on-mobile">
+            <div class="checkbox-block">
+              <input type="checkbox" id="Tbilisi" />
+              <label for="Tbilisi">Tbilisi</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Batumi" />
+              <label for="Batumi">Batumi</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Borjomi" />
+              <label for="Borjomi">Borjomi</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Bakuriani" />
+              <label for="Bakuriani">Bakuriani</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" class="owners-delivery" />
+              <label for="owners-delivery">city1</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+          </div>
+          <div class="view-all-brands">
+            <button class="view-all-btn">View more</button>
+          </div>
+        </div>
+        <hr class="market-filter-hr" />
+        <div class="filter-review">
+          <div class="filter-category-head" style="margin-bottom: 10px">
+            <p>Shops:</p>
+            <button>
+              clear
+              <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+            </button>
+          </div>
+          <div class="filter-checkboxes-shops checkboxes-on-mobile">
+            <div class="checkbox-block">
+              <input type="checkbox" id="Tbilisi" />
+              <label for="Tbilisi">Bibliusi <span>(7 Products)</span></label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Batumi" />
+              <label for="Batumi">Mart <span>(3 Products)</span></label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Borjomi" />
+              <label for="Borjomi">Name <span>(1 Products)</span></label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" id="Bakuriani" />
+              <label for="Bakuriani">Bakuriani <span>(8 Products)</span></label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" class="owners-delivery" />
+              <label for="owners-delivery">city1</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="geo-post">Georgian Post</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="owners-delivery">Owners Delivery</label>
+            </div>
+            <div class="checkbox-block">
+              <input type="checkbox" />
+              <label for="pick-up">Pick Up</label>
+            </div>
+          </div>
+          <div class="view-all-shops">
+            <button class="view-all-btn">View more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="header" class="with-filter"></header>
+    <div class="container">
+      <div class="currect-pages">
+        <a href="/">Home</a>
+        >
+        <a href="/pages/market.html">Market</a>
+      </div>
+      <div class="market-page-container">
+        <div class="market-page-category-and-filter">
+          <div id="categories" class="categories-market-page"></div>
+          <div class="market-filter">
+            <div class="filter-header">
+              <p>Filter</p>
+              <button>
+                clear all
+                <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+              </button>
+            </div>
+            <hr class="market-filter-hr" />
+            <div class="filter-review">
+              <div class="filter-category-head">
+                <p>Reviews:</p>
+                <button>
+                  clear
+                  <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+                </button>
+              </div>
+              <div class="market-product-review">
+                <div class="selected-review"></div>
+                <div class="selected-review"></div>
+                <div class="selected-review"></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <hr class="market-filter-hr" />
+            <div class="filter-review">
+              <div class="filter-category-head">
+                <p>Price range:</p>
+                <button>
+                  clear
+                  <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+                </button>
+              </div>
+              <div class="market-product-price-range">
+                <div class="price-range">
+                  <input
+                    type="text"
+                    class="min-price-filter"
+                    placeholder="Min..."
+                  />
+                  <input
+                    type="text"
+                    class="max-price-filter"
+                    placeholder="Max..."
+                  />
+                  <button class="set-rice-filter">Ok</button>
+                </div>
+              </div>
+            </div>
+            <hr class="market-filter-hr" />
+            <div class="filter-review">
+              <div class="filter-category-head">
+                <p>Price off:</p>
+                <button>
+                  clear
+                  <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+                </button>
+              </div>
+              <ul class="market-product-price-off">
+                <li>5%</li>
+                <li>15%</li>
+                <li class="selected-price-off">25%</li>
+                <li class="selected-price-off">50%</li>
+              </ul>
+            </div>
+            <hr class="market-filter-hr" />
+            <div class="filter-review">
+              <div class="filter-category-head" style="margin-bottom: 10px">
+                <p>Choose shipping type:</p>
+                <button>
+                  clear
+                  <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+                </button>
+              </div>
+              <div class="filter-checkboxes">
+                <div class="checkbox-block">
+                  <input type="checkbox" id="geo-post" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="owners-delivery" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="pick-up" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+              </div>
+            </div>
+            <hr class="market-filter-hr" />
+            <div class="filter-review">
+              <div class="filter-category-head" style="margin-bottom: 10px">
+                <p>Location:</p>
+                <button style="color: #b6b6b6">
+                  clear
+                  <img
+                    src="../image/svg/filter-clear-gray.svg"
+                    alt="clear filter"
+                  />
+                </button>
+              </div>
+              <div class="filter-checkboxes-location">
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Tbilisi" />
+                  <label for="Tbilisi">Tbilisi</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Batumi" />
+                  <label for="Batumi">Batumi</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Borjomi" />
+                  <label for="Borjomi">Borjomi</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Bakuriani" />
+                  <label for="Bakuriani">Bakuriani</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" class="owners-delivery" />
+                  <label for="owners-delivery">city1</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+              </div>
+              <div class="view-all-location">
+                <button class="view-all-btn">View more</button>
+              </div>
+            </div>
+            <hr class="market-filter-hr" />
+            <div class="filter-review">
+              <div class="filter-category-head" style="margin-bottom: 10px">
+                <p>Brands:</p>
+                <button style="color: #b6b6b6">
+                  clear
+                  <img
+                    src="../image/svg/filter-clear-gray.svg"
+                    alt="clear filter"
+                  />
+                </button>
+              </div>
+              <div class="search-in-market-filter">
+                <input
+                  type="text"
+                  class="form-control-filter"
+                  placeholder="Search"
+                />
+                <button class="market-filter-search-btn">
+                  <img src="../image/svg/filter-loog.svg" alt="search" />
+                </button>
+              </div>
+              <div class="filter-checkboxes-brands">
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Tbilisi" />
+                  <label for="Tbilisi">Tbilisi</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Batumi" />
+                  <label for="Batumi">Batumi</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Borjomi" />
+                  <label for="Borjomi">Borjomi</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Bakuriani" />
+                  <label for="Bakuriani">Bakuriani</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" class="owners-delivery" />
+                  <label for="owners-delivery">city1</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+              </div>
+              <div class="view-all-brands">
+                <button class="view-all-btn">View more</button>
+              </div>
+            </div>
+            <hr class="market-filter-hr" />
+            <div class="filter-review">
+              <div class="filter-category-head" style="margin-bottom: 10px">
+                <p>Shops:</p>
+                <button>
+                  clear
+                  <img src="../image/svg/filter-clear.svg" alt="clear filter" />
+                </button>
+              </div>
+              <div class="filter-checkboxes-shops">
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Tbilisi" />
+                  <label for="Tbilisi"
+                    >Bibliusi <span>(7 Products)</span></label
+                  >
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Batumi" />
+                  <label for="Batumi">Mart <span>(3 Products)</span></label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Borjomi" />
+                  <label for="Borjomi">Name <span>(1 Products)</span></label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" id="Bakuriani" />
+                  <label for="Bakuriani"
+                    >Bakuriani <span>(8 Products)</span></label
+                  >
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" class="owners-delivery" />
+                  <label for="owners-delivery">city1</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="geo-post">Georgian Post</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="owners-delivery">Owners Delivery</label>
+                </div>
+                <div class="checkbox-block">
+                  <input type="checkbox" />
+                  <label for="pick-up">Pick Up</label>
+                </div>
+              </div>
+              <div class="view-all-shops">
+                <button class="view-all-btn">View more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="market-page-content">
+          <h3 class="market-page-content-title">
+            Products: <span>60,000</span>
+          </h3>
+          <div class="mobile-market-head">
+            <h3 class="market-page-content-title bold">
+              Products: <span>60,000</span>
+            </h3>
+            <div class="flex-box">
+              <select
+                class="select-form-control"
+                style="
+                  font-size: 15px;
+                  width: 149px;
+                  height: 32px;
+                  color: black;
+                "
+              >
+                <option value="1">Featured</option>
+                <option value="2">A-Z</option>
+                <option value="3">Z-A</option>
+              </select>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="Component_93_1"
+                dataName="Component 93 – 1"
+                width="26.999"
+                height="27.044"
+                viewBox="0 0 26.999 27.044"
+              >
+                <path
+                  id="Exclusion_1"
+                  dataName="Exclusion 1"
+                  d="M13.262,25.934A13.439,13.439,0,0,1,8.1,24.915a13.238,13.238,0,0,1-4.215-2.779,12.911,12.911,0,0,1-2.842-4.122,12.744,12.744,0,0,1,0-10.095A12.911,12.911,0,0,1,3.884,3.8,13.238,13.238,0,0,1,8.1,1.019a13.585,13.585,0,0,1,10.324,0A13.238,13.238,0,0,1,22.639,3.8,12.912,12.912,0,0,1,25.481,7.92a12.744,12.744,0,0,1,0,10.095,12.912,12.912,0,0,1-2.842,4.122,13.238,13.238,0,0,1-4.215,2.779A13.438,13.438,0,0,1,13.262,25.934Zm0-22.572a9.517,9.517,0,0,0-9.4,9.605,9.517,9.517,0,0,0,9.4,9.605,9.517,9.517,0,0,0,9.4-9.605A9.517,9.517,0,0,0,13.262,3.362Z"
+                  fill="#42d921"
+                />
+                <path
+                  id="Path_2"
+                  dataName="Path 2"
+                  d="M0,0,3.85.008l.015,7.219L.015,7.219Z"
+                  transform="translate(19.156 21.934) rotate(-45)"
+                  fill="#42d921"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="market-items-sort">
+            <div class="market-items-sort-contant">
+              <div class="prodact-sortable-item" style="padding-left: 24px; min-width: 210px">
+                <p>Sort by product type:</p>
+                <ul class="sort-by">
+                  <li class="active-sorted">All</li>
+                  <li>New</li>
+                  <li>Used</li>
+                </ul>
+              </div>
+              <div class="prodact-sortable-item" style="min-width: 285px;">
+                <p>Sort by Seller:</p>
+                <ul class="sort-by">
+                  <li class="active-sorted">All</li>
+                  <li>Only shops</li>
+                  <li>Only Individuals</li>
+                </ul>
+              </div>
+              <div class="prodact-sortable-item" style="min-width: 185px;">
+                <p>Sort by cause:</p>
+                <ul class="sort-by">
+                  <li class="active-sorted">All</li>
+                  <li style="color: #41c227">FREE</li>
+                  <li>Donate</li>
+                </ul>
+              </div>
+              <div class="prodact-sortable-item" style="min-width: 170px;">
+                <p>Sort by</p>
+                <select
+                  class="select-form-control"
+                  style="
+                    font-size: 15px;
+                    width: 149px;
+                    height: 32px;
+                    color: black;
+                  "
+                >
+                  <option value="1">Featured</option>
+                  <option value="2">A-Z</option>
+                  <option value="3">Z-A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="market-page-items-container">
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items free-product"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items free-product"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+            <div class="market-page-items"></div>
+          </div>
+          <button class="load-more-product">More</button>
+        </div>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="../js/marketEvents.js"></script>
+  </body>
+</html>

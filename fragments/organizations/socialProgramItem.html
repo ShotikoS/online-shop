@@ -1,0 +1,107 @@
+<div class="social-program-item-container">
+  <div
+    class="social-program-item-image"
+    style="background-image: url('../../image/Product1.png')"
+  ></div>
+  <div class="social-program-description">
+    <p class="bold fs14">Justice for Jake Blake</p>
+    <div class="social-programs-wrapper">
+      <p class="fs13 social-program-item-description social-programs-paragraph">
+        On August 23rd my son was shot multiple times in the back by a On August
+        23rd my son was shot multiple times in the back by a
+      </p>
+    </div>
+    <div class="social-program-progress">
+      <div class="social-programs-progress-line progress-line"></div>
+      <div class="social-program-progress-done progress-line"></div>
+    </div>
+    <div class="social-programs-actions">
+      <div class="social-programs-add-to-favorite social-programs-actions-btns">
+        <div class="social-programs-add-to-favorite-btn programs-actions-btns">
+          <object data="../../image/svg/fav.svg" type=""></object>
+        </div>
+        <p class="social-programs-favorited-quantity social-program-quantities">
+          2397
+        </p>
+        <p class="social-programs-add-fav-actions-hover">Follow</p>
+      </div>
+      <div class="social-program-share social-programs-actions-btns">
+        <div class="social-program-share-btn programs-actions-btns">
+          <object data="../../image/svg/socshare.svg" type=""></object>
+        </div>
+        <p class="social-program-shared-quantity social-program-quantities">
+          1373
+        </p>
+      </div>
+    </div>
+    <div class="social-program-prices" style="display: flex; margin-top: 8px">
+      <p class="fs13">
+        <span class="fs18 social-program-current-donate bold">13,535 ₾ </span
+        >raised of 25,000₾ Goal
+      </p>
+    </div>
+    <div
+      class="social-program-progress social-program-progress-on-social-programs-page"
+    >
+      <div class="social-programs-progress-line progress-line"></div>
+      <div class="social-program-progress-done progress-line"></div>
+    </div>
+    <div class="product-donate-container">
+      <div class="product-donate-count">
+        <input type="text" placeholder="0" class="donate-input" />
+        <span>₾</span>
+      </div>
+      <button class="product-donate-btn">Donate</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-donate-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .product-donate-count {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .product-donate-btn {
+    background: #41c227;
+    color: white;
+    height: 32px;
+    border: 1px solid #41c227;
+    border-radius: 16px;
+    font-size: 15px;
+  }
+  .product-donate-count span {
+    margin-right: 13px;
+    color: #4a4a4a;
+    position: absolute;
+  }
+  .product-donate-count input {
+    width: 100%;
+    padding-left: 17px;
+    border: 2px solid #f2f2f2;
+    height: 32px;
+    border-radius: 16px;
+    color: #4a4a4a;
+  }
+  .product-donate-count,
+  .product-donate-btn {
+    width: calc(50% - 5px);
+  }
+  .social-programs-items .product-donate-container {
+    display: none;
+  }
+  .on-organization-page .social-program-prices {
+    display: none !important;
+  }
+  .on-organization-page .product-donate-container{
+    margin-top: 12px;
+  }
+  #social-programs .shop-item-box{
+    height: 317px !important;
+  }
+</style>

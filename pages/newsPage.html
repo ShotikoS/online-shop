@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/categories.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
+    <link rel="stylesheet" href="../styles/mobileBottomBar.css" />
+    <link rel="stylesheet" href="../styles/socialPrograms.css" />
+    <link rel="stylesheet" href="../styles/newsPost.css" />
+    <link rel="stylesheet" href="../styles/news.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/newsPage.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/newsPage.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mobile-bottom-bar"></div>
+    <header
+      id="header"
+      class="no-left-item without-search no-category"
+    ></header>
+    <div class="container">
+      <div class="currect-pages">
+        <a href="/">Home</a>
+        >
+        <a href="/pages/market.html">Market</a>
+      </div>
+      <div class="news-list-page-content">
+        <div class="news-list-content">
+          <div class="news-list-header">
+            <p class="main-section-head-title">News<span> 35</span></p>
+            <div class="flex-box">
+              <p class="sort-text">Sort by</p>
+              <select
+                class="select-form-control"
+                style="
+                  font-size: 15px;
+                  width: 149px;
+                  height: 32px;
+                  color: black;
+                "
+              >
+                <option value="2">Latest</option>
+                <option value="2">A-Z</option>
+                <option value="1">Featured</option>
+                <option value="3">Z-A</option>
+              </select>
+            </div>
+          </div>
+          <div class="select-news-category-container">
+            <div class="news-category-content">
+              <button><</button>
+              <ul class="news-group-list">
+                <li class="active-group">all</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+                <li>news group name</li>
+              </ul>
+              <button>></button>
+            </div>
+          </div>
+          <div class="news-list-header-mobile news-list-header">
+            <p class="main-section-head-title">News<span> 35</span></p>
+            <div class="flex-box">
+              <p class="sort-text">Sort by</p>
+              <select
+                class="select-form-control"
+                style="
+                  font-size: 15px;
+                  width: 149px;
+                  height: 32px;
+                  color: black;
+                "
+              >
+                <option value="2">Latest</option>
+                <option value="2">A-Z</option>
+                <option value="1">Featured</option>
+                <option value="3">Z-A</option>
+              </select>
+            </div>
+          </div>
+          <div class="news-items-content">
+            <div class="news-item"></div>
+            <div class="news-item"></div>
+            <div class="news-item"></div>
+            <div class="news-item"></div>
+          </div>
+          <div id="shops-slider"></div>
+          <div class="news-items-content">
+            <div class="news-item"></div>
+            <div class="news-item"></div>
+            <div class="news-item"></div>
+            <div class="news-item"></div>
+          </div>
+          <button class="load-more-news">More</button>
+        </div>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>

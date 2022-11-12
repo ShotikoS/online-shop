@@ -92,3 +92,22 @@ body{
 	overflow-y: auto;
 	overflow-x: hidden;
 }
+.select-form-control{
+	padding-left: 18px;
+	background: white;
+	border: none;
+	border-radius: 16px;
+	border-right: 16px solid white;
+	outline: 2px solid #F2F2F2;
+}
+.currect-pages {
+	margin-bottom: 20px;
+	font-size: 13px;
+	color: #3d3d3d;
+	opacity: 0.5;
+}
+.currect-pages a {
+	font-size: 13px;
+	color: #3d3d3d;
+	text-decoration: none;
+  }
