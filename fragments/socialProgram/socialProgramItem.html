@@ -55,8 +55,40 @@
     </div>
   </div>
 </div>
+<div class="social-progrram-on-edit" style="margin-top: 15px;">
+  <div class="left-side">
+    <div style="display: flex;"><span class="created fs13" style="color: #707070; opacity: 0.7; width: 54px;">Created: </span><span class="created-date fs13" style="color: #707070; opacity: 1 !important; margin-top: 4px;"> 2020-03-30</span></div>
+    <div style="display: flex; margin-top: 20px;"><span class="updated fs13" style="color: #707070; opacity: 0.7; width: 54px;">Updated: </span><span class="updated-date fs13" style="color: #707070; opacity: 1 !important; margin-top: 4px;">2020-03-30</span></div>
+  </div>
+  <div class="right-side">
+    <select name="" id="" class="select-form-control fs15" style="width: 118px; height: 32px; background: #F6F6F6; color: #707070; margin-bottom: 6px; border-right-color: #F6F6F6;">
+      <option value="paused">Paused</option>
+      <option value="started">Started</option>
+    </select>
+    <a href="#" class="edit-social-program">Edit</a>
+    <a href="#" class="edit-social-program-mobile">
+      <img src="../../image/svg/edit-pen.svg" alt="">
+    </a>
+  </div>
+</div>
 
 <style>
+  .left-side, .right-side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .edit-social-program-mobile{
+    display: none;
+  }
+  .social-progrram-on-edit{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .right-side{
+    align-items: flex-end !important;
+  }
   .product-donate-container {
     display: flex;
     align-items: center;

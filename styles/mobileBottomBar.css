@@ -42,6 +42,38 @@
   color: #42be29;
 }
 
+.save-orgs-form {
+  position: fixed;
+  height: 68px;
+  background: white;
+  margin-top: 100vh;
+  transform: translateY(-126px);
+  width: 100%;
+  z-index: 1111;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1607843137);
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.save-orgs-form button {
+  width: 149px;
+  height: 44px;
+}
+.save-orgs-form button:first-child {
+  background: #2E76FC;
+  border: 1px solid #2E76FC;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+}
+.save-orgs-form button:last-child {
+  background: none;
+  color: #2E76FC;
+  font-size: 15px;
+  border: none;
+}
+
 @media (max-width: 1024px) {
   .mobile-bottom-section-container {
     display: block;

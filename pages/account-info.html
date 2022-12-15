@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/categories.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
+    <link rel="stylesheet" href="../styles/mobileBottomBar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/market.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/organizations/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/accountInfo.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mobile-bottom-bar"></div>
+    <header id="header" class="main-page-header only-logo"></header>
+    <div class="org-sold-page-navigation-container">
+      <div class="container">
+        <div class="currect-pages">
+          <a href="/">Home</a>
+          >
+          <a href="/pages/market.html">Market</a>
+        </div>
+        <p class="organization-page-name">My account</p>
+        <div id="organizations"></div>
+        <div class="organizations-content-blocks">
+          <ul class="organizations-page-navigation">
+            <li class="active-organization-tab">
+              <a href="/pages/account-info.html">Account Informaton</a>
+            </li>
+            <li>
+              <a href="/pages/organization-social-program.html"
+                >Social Projects</a
+              >
+            </li>
+            <li>
+              <a href="/pages/organization-my-product.html">My Products</a>
+            </li>
+            <li>
+              <a href="/pages/organization-sold.html">Sold</a>
+            </li>
+            <li>
+              <a href="/pages/organization-orders.html">My Orders</a>
+            </li>
+            <li>
+              <a href="/pages/organization-delivery-addresses.html"
+                >Delivery Addresses</a
+              >
+            </li>
+            <li>
+              <a href="/pages/organization-messages.html">Messages</a>
+            </li>
+            <li>
+              <a href="/pages/organization-change-password.html"
+                >Change Password</a
+              >
+            </li>
+          </ul>
+          <div class="organizations-page-main-content-container">
+            <div class="section-head-container">
+              <p class="bold section-head-title">Account Informaton</p>
+              <div class="section-head-action-btns">
+                <button class="no-background-btn underlined on-desktop">
+                  Profile Preview
+                </button>
+                <button class="no-background-btn underlined on-mobile">
+                  Preview
+                </button>
+                <button class="border-blue-btn">Edit</button>
+                <button class="background-blue-btn save-changes">
+                  Save Changes
+                </button>
+                <button class="no-background-btn cancel-edit">Cancel</button>
+              </div>
+            </div>
+            <div class="account-info-form">
+              <div class="form-input-container no-margin">
+                <label class="organization-label">Organization Name</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs editable"
+                  placeholder="Enter Organization Name"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label no-height"> </label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs editable"
+                  placeholder="შეიყვანეთ ორგანიზაციის სახელი"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Account Type</label>
+                <input
+                  type="text"
+                  name="search"
+                  disabled
+                  class="form-control-orgs"
+                  placeholder="Enter Account Type"
+                />
+              </div>
+              <div class="account-info-about">
+                <div class="form-input-container mb-10">
+                  <label class="organization-label">About</label>
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    class="account-info-about-input"
+                    placeholder="Eng"
+                  ></textarea>
+                </div>
+                <div class="form-input-container">
+                  <label class="organization-label hide-mobile"> </label>
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    class="account-info-about-input"
+                    placeholder="Geo"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-input-container" style="margin-bottom: 11px;">
+                <label class="organization-label">Categories</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="+ add categories"
+                />
+              </div>
+              <div class="tags-content-container">
+                <div class="tag"></div>
+                <div class="tag"></div>
+                <div class="tag"></div>
+                <div class="tag"></div>
+                <div class="tag"></div>
+                <div class="tag"></div>
+                <div class="tag"></div>
+                <div class="tag"></div>
+              </div>
+              <div class="divider"></div>
+              <p class="bold section-head-title" style="width: 100%; margin-bottom: 30px;">Contact Information</p>
+              <div class="form-input-container">
+                <label class="organization-label">Phone</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Enter Your Phone Number"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Email Address</label>
+                <input
+                  type="email"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Enter Your Email Address"
+                />
+              </div>
+              <div class="form-input-container no-margin">
+                <label class="organization-label">City</label>
+                <select
+                  type="text"
+                  name="search"
+                  class="select-form-control"
+                  style="width: 100%;
+                  height: 48px;
+                  border-radius: 30px;"
+                >
+                  <option value="Tbilisi">Tbilisi</option>
+                  <option value="Batumi">Batumi</option>
+                </select>
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label no-height"> </label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  value="თბილისი"
+                  disabled
+                />
+              </div>
+              <div class="form-input-container no-margin">
+                <label class="organization-label">Street Address</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Enter Street Address"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label no-height"> </label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  disabled
+                  placeholder="შეიყვანეთ მისამართი"
+                />
+              </div>
+              <div style="width: 100%;">
+                <div class="form-input-container">
+                  <label class="organization-label">Phostal Code</label>
+                  <input
+                    type="text"
+                    name="search"
+                    class="form-control-orgs"
+                    placeholder="საფოსტო ინდექსი"
+                  />
+                </div>
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Website</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Website URL"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Facebook</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Facebook URL"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Instagram</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Instagram URL"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Youtube</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Youtube URL"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Contact Person</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Enter Contact Person"
+                />
+              </div>
+              <div class="form-input-container">
+                <label class="organization-label">Contact Person mobile number</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Enter Contact Person mobile number"
+                />
+              </div>
+              <div class="divider"></div>
+              <p class="bold section-head-title" style="width: 100%; margin-bottom: 12px;">Legal Information</p>
+              <div class="form-input-container" style="margin-bottom: 16px;">
+                <input type="file" style="display: none;" id="upload-documents" />
+                <label
+                  for="upload-documents"
+                  class="form-control-orgs"
+                  style="display: flex; align-items: center; color: #828282; cursor: pointer"
+                >+ Upload Legal Documents</label>
+              </div>
+              <div class="tags-content-container" style="margin-bottom: 15px;">
+                <div class="tag"></div>
+                <div class="tag"></div>
+              </div>
+              <div class="form-input-container" style="margin-bottom: 0px;">
+                <label class="organization-label">ID Number</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Enter Your ID number"
+                />
+              </div>
+              <div class="form-input-container" style="margin-bottom: 0px;">
+                <label class="organization-label">IBAN</label>
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control-orgs"
+                  placeholder="Enter Your IBAN"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>

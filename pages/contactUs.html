@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/categories.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
+    <link rel="stylesheet" href="../styles/mobileBottomBar.css" />
+    <link rel="stylesheet" href="../styles/socialPrograms.css" />
+    <link rel="stylesheet" href="../styles/newsPost.css" />
+    <link rel="stylesheet" href="../styles/news.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/newsPage.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/organizations/prev-project-styles.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/newsPage.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mobile-bottom-bar"></div>
+    <header
+      id="header"
+      class="no-left-item without-search no-category only-logo"
+    ></header>
+    <div class="container">
+      <div class="currect-pages">
+        <a href="/">Home</a>
+        >
+        <a href="/pages/market.html">Market</a>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="contact-page--left">
+              <h1 class="contact-page--title bold">CONTACT US</h1>
+              <form class="contact-page__form">
+                <label class="contact-page__form--label">
+                  <h1 class="contact-page__form--title regular">Full name</h1>
+                  <input type="text" class="contact-page__form--input" />
+                </label>
+                <label class="contact-page__form--label">
+                  <h1 class="contact-page__form--title regular">E-mail</h1>
+                  <input type="text" class="contact-page__form--input" />
+                </label>
+                <label class="contact-page__form--label" style="width: 100%;">
+                  <h1 class="contact-page__form--title regular">Subject</h1>
+                  <input type="text" class="contact-page__form--input" style="width: 100%;" />
+                </label>
+                <label class="contact-page__form--label" style="width: 100%;">
+                  <h1 class="contact-page__form--title regular">Mesage</h1>
+                  <textarea
+                    style="width: 100%;"
+                    type="text"
+                    rows="5"
+                    class="contact-page__form--input contact-page__form--textarea"
+                  ></textarea>
+                </label>
+                <div class="d-flex align-items-center">
+                  <button class="contact-page__form--btn bold">Send</button>
+                  <p class="contact-page__form--done regular">
+                    Message sent successfully
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">//map</div>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>

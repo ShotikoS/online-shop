@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/categories.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
+    <link rel="stylesheet" href="../styles/mobileBottomBar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/market.css" />
+    <link rel="stylesheet" href="../styles/socialPrograms.css" />
+    <link rel="stylesheet" href="../styles/shops-list.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/organizations/style.css" />
+    <link rel="stylesheet" href="../styles/organizations/social-project.css">
+    <link rel="stylesheet" href="../styles/organizations/ogranizations-product.css">
+    <link rel="stylesheet" href="../styles/organizations/sold.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/socialProjects.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mobile-bottom-bar"></div>
+    <header id="header" class="main-page-header only-logo"></header>
+    <div class="org-sold-page-navigation-container">
+      <div class="container">
+        <div class="currect-pages">
+          <a href="/">Home</a>
+          >
+          <a href="/pages/market.html">Market</a>
+        </div>
+        <p class="organization-page-name">My account</p>
+        <div id="organizations"></div>
+        <div class="organizations-content-blocks">
+          <ul class="organizations-page-navigation">
+            <li>
+              <a href="/pages/account-info.html">Account Informaton</a>
+            </li>
+            <li>
+              <a href="/pages/organization-social-program.html"
+                >Social Projects</a
+              >
+            </li>
+            <li>
+              <a href="/pages/organization-my-product.html">My Products</a>
+            </li>
+            <li class="active-organization-tab">
+              <a href="/pages/organization-sold.html">Sold</a>
+            </li>
+            <li>
+              <a href="/pages/organization-orders.html">My Orders</a>
+            </li>
+            <li>
+              <a href="/pages/organization-delivery-addresses.html"
+                >Delivery Addresses</a
+              >
+            </li>
+            <li>
+              <a href="/pages/organization-messages.html">Messages</a>
+            </li>
+            <li>
+              <a href="/pages/organization-change-password.html"
+                >Change Password</a
+              >
+            </li>
+          </ul>
+          <div class="organizations-page-main-content-container">
+            <div style="display: flex; align-items: center; justify-content: flex-end; padding-bottom: 9px;">
+              <button class="edit-status-button">
+                Edit Status
+              </button>
+            </div>
+            <div
+              class="section-head-container hide-section-head-container"
+              style="justify-content: flex-end; margin-bottom: 30px"
+            >
+              <p class="bold section-head-title" style="display: none">
+                Account Informaton
+              </p>
+              <div class="section-head-action-btns" style="justify-content: space-between; width: 100%">
+               <div class="export-import-btns">
+                <button class="export-to-xls">Export to .xls</button>
+               </div>
+               <p class="fs15 bold earnings">Your earn 3,678.78 ₾</p>
+              </div>
+            </div>
+            <div class="news-list-header">
+              <p class="main-section-head-title bold">
+                My Products <span class="bold">5</span>
+              </p>
+              <div class="flex-box">
+                <div class="section-header-search-block">
+                  <input
+                    type="text"
+                    name="search"
+                    class="form-control-search"
+                    placeholder="Search Social Projects"
+                  />
+                  <button class="start-search-btn-section-header">
+                    <object
+                      data="../image/svg/loop.svg"
+                      width="26"
+                      height="26"
+                    ></object>
+                  </button>
+                </div>
+                <p class="sort-text">Sort by</p>
+                <select
+                  class="select-form-control"
+                  style="
+                    font-size: 15px;
+                    width: 149px;
+                    height: 32px;
+                    color: black;
+                  "
+                >
+                  <option value="2">Latest</option>
+                  <option value="2">A-Z</option>
+                  <option value="1">Featured</option>
+                  <option value="3">Z-A</option>
+                </select>
+                <object
+                data="../image/svg/loop.svg"
+                width="26"
+                height="26"
+                class="searchicon-on-mobile"
+              ></object>
+              </div>
+            </div>
+            <div class="table-container">
+                <ul class="table-head">
+                    <li class="table-image thead bold"></li>
+                    <li class="table-product thead bold">Product</li>
+                    <li class="table-quantity thead bold" style="text-align: right;">Delivery:</li>
+                    <li class="table-quantity thead bold" style="text-align: right;">Quantity:</li>
+                    <li class="table-sum thead bold" style="text-align: right;">Sum:</li>
+                    <li class="table-date thead bold" style="text-align: right;">Date:</li>
+                </ul>
+                <div class="table-body">
+                    <ul class="table-row" style="border-top: 1px solid #E6E6E6;">
+                        <div class="product-table-show-on-mobile">
+                            <li class="image-col">
+                                <div href="#" class="table-product-image" style="background-image: url('../image/iphone-banner-2.jpg');">
+                                    
+                                </div>
+                            </li>
+                            <li class="col-standard product-col">
+                                <div class="product-description-column">
+                                    <div class="product-status">New</div>
+                                    <a href="#" class="product-description-table">
+                                        <p class="product-description-table">
+                                            TCL 40S325 40 Inch 1080p Smart LED Roku TV
+                                        </p>
+                                    </a>
+                                    <div class="product-price-table">
+                                        <p class="product-price-current-table bold">
+                                        <input type="text" value="1,239.39" disabled class="editable-inputs bold"> ₾
+                                        </p>
+                                        <p class="product-price-old-price-table">
+                                            <input type="text" value="1,430.30" class="editable-inputs"> ₾
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <li class="image-col product-table-hide-on-mobile">
+                            <div href="#" class="table-product-image" style="background-image: url('../image/iphone-banner-2.jpg');">
+                                
+                            </div>
+                        </li>
+                        <li class="col-standard product-col product-table-hide-on-mobile">
+                            <div class="product-description-column">
+                                <div class="product-status">New</div>
+                                <a href="#" class="product-description-table">
+                                    <p class="product-description-table">
+                                        TCL 40S325 40 Inch 1080p Smart LED Roku TV
+                                    </p>
+                                </a>
+                                <div class="product-price-table">
+                                    <p class="product-price-current-table bold">
+                                        <input type="text" value="1,239.39" disabled class="editable-inputs bold"> ₾
+                                    </p>
+                                    <p class="product-price-old-price-table">
+                                        <input type="text" value="1,430.30" class="editable-inputs"> ₾
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-standard counter-col set-width justify-flex-end">
+                          <p class="column-on-mobile bold fs13" style="color: #303030;">Delivery:</p>
+                          <p class="thead-on-mobile bold" style="display: block; font-size: 20px;">9.39 ₾</p>
+                      </li>
+                        <li class="col-standard counter-col set-width justify-flex-end">
+                            <p class="column-on-mobile bold fs13" style="color: #303030;">Quantity:</p>
+                            <p class="thead-on-mobile" style="display: block; font-size: 15px;">2</p>
+                        </li>
+                        <li class="sum-col set-width justify-flex-end"><p class="thead-on-mobile bold">Sum:</p><p class="bold fs20">1239.39₾</p></li>
+                        <li class="date-col set-width">
+                            <p class="thead-on-mobile bold">Date:</p>
+                            <section>
+                                <div>
+                                    <p class="date-col-title">Created:</p>
+                                    <p class="date-col-value">2020-03-30</p>
+                                </div>
+                                <div>
+                                    <p class="date-col-title">Updated:</p>
+                                    <p class="date-col-value">2020-03-30</p>
+                                </div>
+                            </section>
+                        </li>
+                    </ul>
+                    <div class="sold-item-container">
+                        <div class="orders-detail">
+                          <p class="order-number color-gray bold fs15">Order_25</p>
+                          <div class="order-profile-indo">
+                            <img src="../image/mini-banner2.png" alt="user" class="user-image-rounded">
+                            <div>
+                              <p class="color-gray fs20">Irakli Mazmishvili</p>
+                              <p class="color-gray fs13">bought from you 3 times</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="order-details-buttons">
+                          <button class="order-detail-send-message fs15 bold">
+                            <img src="../image/svg/sms-green.svg" alt="icon">
+                            <p>Send Message</p>
+                          </button>
+                          <button class="order-detail-invoice fs15 bold">Invoice</button>
+                          <button class="order-detail-collapse">
+                            Collapse
+                          </button>
+                        </div>
+                        <div class="order-details-form">
+                          <div class="rows-head-mobile-view">
+                            <div class="order-profile-indo order-profile-info-mobile">
+                              <img src="../image/mini-banner2.png" alt="user" class="user-image-rounded">
+                              <div>
+                                <p class="color-gray fs20">Irakli Mazmishvili</p>
+                                <p class="color-gray fs13">bought from you 3 times</p>
+                              </div>
+                            </div>
+                            <div class="orders-action-button-mobile">
+                              <button class="order-detail-send-message fs15 bold">
+                                <img src="../image/svg/sms-green.svg" alt="icon">
+                                <p>Message</p>
+                              </button>
+                              <button class="order-detail-invoice fs15 bold">Invoice</button>
+                            </div>
+                          </div>
+                          <div class="order-details-input-forms">
+                            <div class="form-input-container">
+                              <label class="organization-label">Address</label>
+                              <input
+                                type="email"
+                                name="search"
+                                class="form-control-orgs"
+                              />
+                            </div>
+                            <div class="form-input-container">
+                              <label class="organization-label">Shipping</label>
+                              <input
+                                type="email"
+                                name="search"
+                                class="form-control-orgs"
+                              />
+                            </div>
+                            <div class="form-input-container">
+                              <label class="organization-label">Reciver Name</label>
+                              <input
+                                type="email"
+                                name="search"
+                                class="form-control-orgs"
+                              />
+                            </div>
+                            <div class="form-input-container">
+                              <label class="organization-label">Personal #</label>
+                              <input
+                                type="email"
+                                name="search"
+                                class="form-control-orgs"
+                              />
+                            </div>
+                            <div class="form-input-container">
+                              <label class="organization-label">Phone #</label>
+                              <input
+                                type="email"
+                                name="search"
+                                class="form-control-orgs"
+                              />
+                            </div>
+                            <div class="form-input-container">
+                              <label class="organization-label">Status</label>
+                              <input
+                                type="email"
+                                name="search"
+                                class="form-control-orgs"
+                              />
+                            </div>
+                          </div>
+                          <div class="text-area-container">
+                            <label for="">Comment</label>
+                            <textarea name="" id="" class="order-details-text-area" cols="30" rows="10"></textarea>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="show-more-btn-container">
+                        <button class="load-more">
+                            More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>

@@ -1,7 +1,8 @@
 @font-face {
     font-family: "regular";
-    src: url("../fonts/regular.ttf")
+    src: url("/fonts/regular.ttf")
 }
+
 @font-face{
 	font-family: "bold";
 	src: url("../fonts/Bold.ttf");
@@ -24,7 +25,7 @@ time, mark, audio, video, select, option, input {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'regular';
+	font-family: 'regular' !important;
 	vertical-align: baseline;
 }
 body{
@@ -111,3 +112,6 @@ body{
 	color: #3d3d3d;
 	text-decoration: none;
   }
+.enable-edit{
+	border: 1px solid #2E76FC;
+}
